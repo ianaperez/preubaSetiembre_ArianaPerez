@@ -14,24 +14,24 @@ const UsuariosPais = () => {
 
   useEffect(() => {
     async function obtenerUsuarioPais() {
-      const respuesta = await fetch("https://randomuser.me/api/?results=3");
-      const datos = await respuesta.json();
-      setUsuarioPais(datos);
+      try {
+        const response = await fetch(
+          "https://randomuser.me/api/?results=3?$nat={idPais}"
+        );
+        if (!response.ok) {
+          throw new Error("Error al obtener usuarios");
+        } else {
+          const datos = await response.json();
+          setUsuarioPais(datos);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
     }
     obtenerUsuarioPais();
   }, [idPais]);
 
-  return (
-    <div>
-      <h1>Usuarios:</h1>
-      <div>
-        <img src={usuarioPais?.fotoPerfil} alt="Foto de perfil del usuario" />
-        <p>Nombre: {usuarioPais.name}</p>
-        <p>Email: {usuarioPais.email}</p>
-        <p>Pais: {usuarioPais.pais}</p>
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export { UsuariosPais };
