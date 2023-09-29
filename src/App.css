@@ -1,6 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.contenedor{
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.links{
+  flex-direction: row;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  width: 25vh;
+}
+
+.links:hover{
+  background-color: #f16202;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    width: 25vh;
+}
+
+body{
+  background-color: #272727;
+}
+
+h1{
+  color: rgb(127, 241, 123);
+  font-family: 'Staatliches';
+}
+
+p{
+  margin: 0.5rem 0rem;
+  flex-direction: row;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }

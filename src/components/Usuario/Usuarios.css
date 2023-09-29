@@ -1,0 +1,17 @@
+.sub_contenedor{
+  margin-bottom: 3rem;
+}
+
+span{
+  font-weight: 700;
+  color: #f6a169;
+}
+
+img{
+  border-radius: 50%;
+
+}
+
+img:hover{
+  border-radius: 0%;
+}
